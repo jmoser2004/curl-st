@@ -5,9 +5,13 @@ dd if=/dev/zero of=dummy_data/quarter_gig.bin bs=1M count=256
 dd if=/dev/zero of=dummy_data/half_gig.bin bs=1M count=512
 dd if=/dev/zero of=dummy_data/gig.bin bs=1M count=1024
 
+sudo apt update -y
+sudo apt install python3.13-venv -y
+
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
 sudo cp curl-st.service /etc/systemd/system/curl-st.service
+sudo systemctl daemon-reload
 sudo systemctl start curl-st.service

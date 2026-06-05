@@ -3,8 +3,8 @@ Description=curl-st
 After=network.target
 
 [Service]
-WorkingDirectory=/home/debian/curl-st
-ExecStart=/home/debian/curl-st/.venv/bin/python server.py
+WorkingDirectory=/home/admin/curl-st
+ExecStart=/home/admin/curl-st/.venv/bin/python server.py
 Restart=always
 
 [Install]
