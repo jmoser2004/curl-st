@@ -36,7 +36,7 @@ def root():
 
 @server.get("/download")
 def download():
-    return FileResponse("dummy_data/dummy_gig.bin", media_type="application/octet-stream")
+    return FileResponse("dummy_data/quarter_gig.bin", media_type="application/octet-stream")
 
 @server.get("/speedtest.sh")
 def download_script():
