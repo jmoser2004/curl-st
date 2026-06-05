@@ -36,8 +36,7 @@ def root():
 
 @server.get("/download")
 def download():
-    data = "a" * 1_000_000 #10 MB
-    return data
+    return FileResponse("dummy_data/dummy_gig.bin", media_type="application/octet-stream")
 
 @server.get("/speedtest.sh")
 def download_script():
@@ -45,7 +44,8 @@ def download_script():
 
 @server.post("/upload")
 async def upload(request: Request):
-    await request.body()
+    async for _ in request.stream():
+        pass
     return "OK\n"
 
 if __name__ == "__main__":
