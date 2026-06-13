@@ -26,7 +26,7 @@ jobs:
           username: admin
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /path/to/curl-st
+            cd curl-st
             git pull origin main
             source venv/bin/activate
             pip install -r requirements.txt
