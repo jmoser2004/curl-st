@@ -1,5 +1,3 @@
-import os
-import time
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import Response, PlainTextResponse, FileResponse

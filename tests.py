@@ -3,6 +3,6 @@ from server import server
 
 client = TestClient(server)
 
-def test_health(server):
+def test_health():
     response = client.get("/")
     assert response.status_code == 200
