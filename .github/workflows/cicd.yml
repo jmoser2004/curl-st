@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r requirements.txt pytest httpx
-      - run: pytest
+      - run: pytest tests/tests.py
 
   deploy:
     needs: test          # gate on CI passing
